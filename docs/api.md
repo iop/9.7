@@ -19,6 +19,7 @@ An in-memory collection of notes. Construct one with `NoteBook()`.
 | `list()` | Return all notes in insertion order. |
 | `remove(note_id)` | Remove the note with this id. |
 | `find(title)` | Return the first note with this exact title. |
+| `filter_by_tag(tag)` | Return the notes carrying the given tag. |
 
 ## `Note`
 
