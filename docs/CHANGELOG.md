@@ -7,16 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-13
+
 ### Added
 
 - Filter notes by tag
 - Export a notebook to a JSON string
-- Search across all notes by their text
+- Full-text search across notes
+
+### Changed
+
+- Extract a default-notebook factory
 
 ### Fixed
 
 - Duplicate tags on a note are no longer stored
-- A missing notes file now produces a clear error message
+- Report a clear error when the notes file is missing
 
 ## [0.1.0] - 2026-01-15
 
