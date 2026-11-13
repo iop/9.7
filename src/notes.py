@@ -55,3 +55,9 @@ class NoteBook:
     def filter_by_tag(self, tag):
         """Return the notes carrying the given tag."""
         return [n for n in self._notes.values() if tag in n.tags]
+
+
+def dedupe_tags(note):
+    """Remove duplicate tags, preserving first-seen order."""
+    note.tags = list(dict.fromkeys(note.tags))
+    return note
