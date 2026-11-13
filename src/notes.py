@@ -51,3 +51,7 @@ class NoteBook:
     def find(self, title):
         """Return the first note with this exact title."""
         return next(n for n in self._notes.values() if n.title == title)
+
+    def filter_by_tag(self, tag):
+        """Return the notes carrying the given tag."""
+        return [n for n in self._notes.values() if tag in n.tags]
