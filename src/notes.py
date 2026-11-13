@@ -61,3 +61,8 @@ def dedupe_tags(note):
     """Remove duplicate tags, preserving first-seen order."""
     note.tags = list(dict.fromkeys(note.tags))
     return note
+
+
+def new_notebook():
+    """Build an empty notebook from one place."""
+    return NoteBook()
