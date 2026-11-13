@@ -44,10 +44,9 @@ jobs:
             echo "::notice::No version bump required"
             exit 0
           fi
-          comment="$(claude -p "$(cat .github/prompts/version.md)" \
+          claude -p "$(cat .github/prompts/version.md)" \
             --allowed-tools "Bash(git log *)" \
             --model claude-haiku-4-5 \
-            --max-turns 4)"
-          printf '%s\n' "$comment" > /tmp/version-comment.md
+            --max-turns 4 > /tmp/version-comment.md
           gh pr comment "${{ github.event.pull_request.number }}" \
             --body-file /tmp/version-comment.md
