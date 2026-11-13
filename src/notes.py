@@ -66,3 +66,9 @@ def dedupe_tags(note):
 def new_notebook():
     """Build an empty notebook from one place."""
     return NoteBook()
+
+
+def search(book, query):
+    """Return notes whose title or body contains the query (case-insensitive)."""
+    q = query.lower()
+    return [n for n in book.list() if q in n.title.lower() or q in n.body.lower()]
